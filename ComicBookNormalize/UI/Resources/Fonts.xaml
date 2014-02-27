@@ -1,0 +1,19 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    
+    <Style x:Key="TextBlock.Header" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="Segoe UI Light"></Setter>
+        <Setter Property="FontSize" Value="42"></Setter>
+    </Style>
+
+    <Style x:Key="TextBlock.SubHeader" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="Segoe UI Light"></Setter>
+        <Setter Property="FontSize" Value="20"></Setter>
+    </Style>
+
+    <Style x:Key="TextBlock.SmallSubHeader" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="Segoe UI Semibold"></Setter>
+        <Setter Property="FontSize" Value="11"></Setter>
+    </Style>
+
+</ResourceDictionary>

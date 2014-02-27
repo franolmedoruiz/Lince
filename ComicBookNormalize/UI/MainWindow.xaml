@@ -1,0 +1,61 @@
+﻿<controls:MetroWindow 
+    x:Class="UI.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
+    Title="Comic Book Normalize" 
+    Height="600" 
+    MinHeight="480"
+    Width="800"
+    MinWidth="600">
+    
+    <Grid Margin="5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.60*"></ColumnDefinition>
+            <ColumnDefinition Width="0.40*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <!-- SOURCE SECTION -->
+        <Grid Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="100"></ColumnDefinition>
+                <ColumnDefinition Width="100"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Button Grid.Row="0" Grid.Column="0" Style="{DynamicResource SquareButtonStyle}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">Get Source</Button>
+            <TextBlock Grid.Row="0" Grid.Column="1" Style="{DynamicResource TextBlock.Header}" Margin="10,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" Text="C:\Temp\Example.cbr"></TextBlock>
+            <TextBlock Grid.Row="0" Grid.Column="2" Style="{DynamicResource TextBlock.SmallSubHeader}" HorizontalAlignment="Center" VerticalAlignment="Center" Text="52 pages"></TextBlock>
+            <TextBlock Grid.Row="0" Grid.Column="3" Style="{DynamicResource TextBlock.SmallSubHeader}" HorizontalAlignment="Center" VerticalAlignment="Center" Text="18 Mb"></TextBlock>
+        </Grid>
+        
+        <!-- DESTINATION SECTION -->
+        <TextBlock Grid.Row="1" Grid.Column="0" Text="Destination:" FontSize="20" FontFamily="Segoe UI Light"></TextBlock>
+
+        <!-- LINE SECTION -->
+        <Separator Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Stretch"></Separator>
+
+        <!-- PAGES SECTION -->
+        <ScrollViewer Grid.Row="3" Grid.Column="0" VerticalScrollBarVisibility="Auto">
+            <WrapPanel Background="#CCFFFFFF">
+                <Rectangle Height="130" Width="100" Margin="2" Fill="LightSalmon"></Rectangle>
+                <Rectangle Height="130" Width="100" Margin="2" Fill="LightCoral"></Rectangle>
+                <Rectangle Height="130" Width="100" Margin="2" Fill="DarkKhaki"></Rectangle>
+                <Rectangle Height="130" Width="200" Margin="2" Fill="LightGreen"></Rectangle>
+                <Rectangle Height="130" Width="100" Margin="2" Fill="Cyan"></Rectangle>
+                <Rectangle Height="130" Width="100" Margin="2" Fill="LightCoral"></Rectangle>
+                <Rectangle Height="130" Width="100" Margin="2" Fill="LightGreen"></Rectangle>
+            </WrapPanel>
+        </ScrollViewer>
+
+        <!-- METADATA SECTION -->
+    </Grid>
+</controls:MetroWindow>
